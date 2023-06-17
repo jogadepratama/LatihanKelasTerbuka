@@ -1,43 +1,95 @@
-#Perulangan (loop)
+'''
+sisi = 9
 
+#Menggunakan for
 
-angka2_list = [0,1,2,3,4]
-print(angka2_list)
+print(10*"="+"Menggunakan for"+"="*10)
+count = 1
+for i in range(sisi):
+    print("*"*count)
+    count += 1
 
-for i in angka2_list:
-    print(f'i sekarang = {i}')
+print('Akhir Dari For \n')
 
-print('Akhir dari program 1 \n')
+print(10*"="+"Menggunakan while"+"="*10)
+count = 1
 
-angka2_range = range(5)
+while True:
+    print("*"*count)
+    count += 1
 
-for i in angka2_range:
-    print(f'i sekarang = {i}')
+    if count > sisi:
+        break
+print('Akhir Dari while \n')
 
-print('Akhir dari program 2 \n')
+print(10*"="+"Print Hanya Baris Ganjil"+"="*10)
+count = 1
+while True:  
+    if (count%2):
+        print("*"*count)
+        count += 1
+    else:
+        count += 1
+        continue
 
-angka2_range = range(1,5)
+    if count > sisi:
+        break
+print('Akhir Dari while \n')
 
-for i in angka2_range:
-    print(f'i sekarang = {i}')
+print(10*"="+"Print Segitiga Sama Sisi"+"="*10)
+count = 1
+spasi = int(sisi/2)
+while True:  
+    if (count%2):
+        print(' '*spasi,"+"*count)
+        count += 1
+        spasi -= 1
+    else:
+        count += 1
+        continue
 
-print('Akhir dari program 3 \n')
+    if count > sisi:
+        break
 
-data_string = "Selamat Siang Jakarta"
+print('Akhir Segitiga Sama Sisi \n')
 
-for i in data_string:
-    print (i)
+print(10*"="+"Print Ketupat"+"="*10)
+count = 1
+spasi = int(sisi/2)
+while True:  
+    if (count%2):
+        print(' '*spasi,"+"*count)
+        count += 1
+        spasi -= 1
+    else:
+        count += 1
+        continue
 
-print('Akhir dari program 4 \n') 
+    if count > sisi:
+        break
 
-# While loop
+while True:
+    if (count%2): 
+        spasi += 1
+        print(" "*spasi,"+"*count)
+        count -= 1
+    else:
+        count -= 1
+    if count == 0:
+        break
 
-angka = 0
-print (f'angka sekarang -> {angka}')
+print('Akhir Ketupat \n')
+'''
+print(10*"="+"Print Ketupat versi simple"+"="*10)
 
-while angka <10:
-    angka += 1
-    print (f'{angka} + 1 = {angka}')
-    print (f'angka sekarang -> {angka}')
+for i in range(0, 5):
+    print(" " * (5 - i), end = "")
+    for x in range(i):
+        print(" +", end = "")
+    print()
 
-print('akhir dari program 5\n')
+for i in range(5, 0, -1):
+    print(" "*(5-i),end='')
+    for x in range(i):
+        print(" +",end='')
+    print()
